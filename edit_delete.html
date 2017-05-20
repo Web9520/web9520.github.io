@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--Bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!--Firebase-->
+  <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase-database.js"></script>
+  <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyC7u5jTh4YY9Wkn_9LoQFgWtY6UQeyHE54",
+    authDomain: "demo2-2cecc.firebaseapp.com",
+    databaseURL: "https://demo2-2cecc.firebaseio.com",
+    projectId: "demo2-2cecc",
+    storageBucket: "demo2-2cecc.appspot.com",
+    messagingSenderId: "420672400689"
+  };
+  firebase.initializeApp(config);
+  </script>
+  <!--Call post.js file before assigning ids to textarea or button. If you call it at the end of the bosy then error appears-->
+  
+  <!--Css file-->
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+        <div class="mainDiv" align="right">
+           <h1 align="left">Edit or Delete Post</h1>
+           <textarea id="mainText" placeholder="Enter text here..."></textarea>
+           <button id="EditButton" onclick="window.location.href='event.html'" class="btn btn-primary">Edit</button>
+            <button id="DeleteButton" onclick="deletefn()" class="btn btn-danger">Delete</button>
+        </div>
+
+        <script src="post_edit.js"></script> 
+</body>
+</html>

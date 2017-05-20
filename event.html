@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--Bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!--Firebase-->
+  <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase-database.js"></script>
+  <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyC7u5jTh4YY9Wkn_9LoQFgWtY6UQeyHE54",
+    authDomain: "demo2-2cecc.firebaseapp.com",
+    databaseURL: "https://demo2-2cecc.firebaseio.com",
+    projectId: "demo2-2cecc",
+    storageBucket: "demo2-2cecc.appspot.com",
+    messagingSenderId: "420672400689"
+  };
+  firebase.initializeApp(config);
+  </script>
+  <!--Call post.js file before assigning ids to textarea or button. If you call it at the end of the bosy then error appears-->
+  
+  <!--Css file-->
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                 appId      : '1130946710343434',
+                 xfbml      : true,
+                 version    : 'v2.9'
+            });
+        };
+
+  // Load the SDK asynchronously
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+    </script>
+        <div class="mainDiv" align="right">
+           <h1 align="left">Schedule Post</h1>
+           <textarea id="mainText" placeholder="Enter text here..."></textarea>
+           <button id="SubmitButton" onclick="submitfn()" class="btn btn-primary">Save</button>
+           <button id="SubmitButton" onclick="window.location.href='demo2.html'" class="btn btn-danger">Exit</button>
+        </div>
+
+        <script src="post.js"></script> 
+</body>
+</html>
