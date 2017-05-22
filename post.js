@@ -40,10 +40,19 @@ function submitfn(){
 	var message= mainText.value;
 	//firebaseRef.child("Text").set(message);
 	firebaseRef.push().set({title: message});
+	window.alert("Your text is posted.");
+    
+}
+
+function post(){
+	var firebaseRef = firebase.database().ref();
+	var message= mainText.value;
+	//firebaseRef.child("Text").set(message);
+	firebaseRef.push().set({title: message});
     FB.api('/me/feed','POST',{'message': "hey I am Shruti Singh" },
                    function (response) {
                       
-                       console.log('Welcome! your status is posted now.');
+                       console.log('Thanks' + response.name + '!'+'Your status is posted on facebook.');
                       
                     });
 	window.alert("Your text is posted.");
