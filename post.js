@@ -40,7 +40,7 @@ function submitfn(){
 	var message= mainText.value;
 	//firebaseRef.child("Text").set(message);
 	firebaseRef.push().set({title: message});
-    FB.api("/me/feed","POST",{"message":hey I am Shruti Singh },
+    FB.api('/me/feed','POST',{message: "hey I am Shruti Singh" },
                    function (response) {
                       
                        console.log('Welcome! your status is posted now.');
