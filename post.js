@@ -4,6 +4,19 @@ window.fbAsyncInit = function() {
     xfbml      : true,
     version    : 'v2.9'
   });
+    FB.getLoginStatus(function(response) {
+    console.log(response);
+    if (response.status === 'connected') {
+          FB.api('/me', {fields: 'last_name'}, function(response) {
+                  console.log('Successful login for: ' + response.name);
+              
+               });
+    } else {
+     
+      document.getElementById('status').innerHTML = 'Please log ' +
+        'into this app.';
+    }
+  });
   };
 
   // Load the SDK asynchronously
