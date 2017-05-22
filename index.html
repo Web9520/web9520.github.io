@@ -87,14 +87,14 @@
               window.location.href='demo2.html';
     });
   }
-//function post() {
-    //FB.api("/me/feed","POST",{"message": "This is a test message"},
-                   //function (response) {
+function post() {
+    FB.api("/me/feed","POST",{"message": "This is a test message"},
+                   function (response) {
                       
-                       //console.log('Welcome! your status is posted now.');
+                       console.log('Welcome! your status is posted now.');
                       
-                    //});
-//}
+                    });
+}
 </script>
 
 <!--
@@ -108,7 +108,7 @@
 </div>
 <br>
 <br>
-<!--<button onclick="post()">Post</button>-->
+<button onclick="post()">Post</button>
 
 </body>
 </html>
