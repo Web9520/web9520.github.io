@@ -17,6 +17,17 @@ window.fbAsyncInit = function() {
         'into this app.';
     }
   });
+    function (response) {
+    if (response.hasOwnProperty("error")) {
+        alert("Error: " + response.error.message);
+    } else {
+        if (response.status === 'connected') {
+          FB.api('/me', {fields: 'last_name'}, function(response) {
+                  console.log('Successful login for: ' + response.name);
+              
+               });
+    }
+}
   };
 
   // Load the SDK asynchronously
