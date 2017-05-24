@@ -84,11 +84,11 @@
     FB.api('/me', function(response) {
       console.log('Successful login for: ' + response.name);
       window.alert('Thanks for logging in, ' + response.name + '!');
-              window.location.href='demo2.html';
+             // window.location.href='demo2.html';
     });
   }
 function post() {
-    FB.api("/me/feed","POST",{"message": "This is a test message"},
+    FB.api("/me/feed","POST",{"message": "Hey! Have a nice day Shruti. :)"},
                    function (response) {
                       
                        console.log('Welcome! your status is posted now.');
